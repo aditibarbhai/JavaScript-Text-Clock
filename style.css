@@ -1,0 +1,32 @@
+body {
+	color: lightgrey;
+}
+
+.clock {
+	width: 500px;
+    overflow: hidden;
+    font-size: 38px;
+    margin: 0 auto;
+}
+
+.am {
+	background-color: white;
+	color: #F1F4F5;
+}
+
+.am .selected {
+	color: #08DAF5;
+}
+
+.pm {
+	background-color: black;
+	color: #757575;
+}
+
+.pm .selected {
+	color: #FFE500;
+}
+
+.clock .changing {
+	display: inline;
+}
