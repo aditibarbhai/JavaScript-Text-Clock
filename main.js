@@ -42,7 +42,10 @@ function setTime () {
 	// set the hour 
 	if (mins <= 30) {
 		$("#" + hours).addClass("selected");
-		if (mins != 0) $("#past").addClass("selected");
+		if (mins > 2) {
+			$("#past").addClass("selected");
+			$("#minutes").addClass("selected");
+		}
 	} else {
 		$("#" + (hours + 1)).addClass("selected");
 		$("#to").addClass("selected");
@@ -60,7 +63,7 @@ function setTime () {
 	$("#oclock").addClass("selected");
 
 	// set the minutes
-	if (mins > 4) {
+	if (mins > 2) {
 		var roundFive = roundToFive(mins);
 		var minsWords = minsInWords[roundFive];
 		if (Array.isArray(minsWords)) {
@@ -75,6 +78,6 @@ function setTime () {
 
 $(document).ready(function(){
 	setTime();
-	// Function is called every 3 secs to update the UI
+	// Function is called every 2 secs to update the UI
 	setInterval(function(){ setTime(); }, 2000);
 });
