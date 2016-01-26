@@ -66,6 +66,10 @@ function setTime () {
 	if (mins > 2) {
 		var roundFive = roundToFive(mins);
 		var minsWords = minsInWords[roundFive];
+		
+		// if the mins in words are "quarter" or "half", remove the selection on "minutes"
+		if (minsWords == "quarter" || minsWords == "half") $("#minutes").removeClass("selected");
+		
 		if (Array.isArray(minsWords)) {
 			$.each(minsWords, function(i, el) {
 				$("#" + el).addClass("selected");
