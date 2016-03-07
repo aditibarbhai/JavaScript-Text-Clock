@@ -1,4 +1,4 @@
 # jQuery-Text-Clock
 This is a "text clock" built from scratch using jQuery
 
-To use this clock, simply download and open index.html
+You can see a demo [here](http://aditibarbhai.github.io/jQuery-Text-Clock/).
