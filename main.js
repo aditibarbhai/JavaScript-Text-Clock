@@ -17,6 +17,12 @@ var minsInWords = {
 	55 : "five"
 };
 
+function setTitle() {
+	var date = getTime ();
+	var titleTime = date.getHours() + ":" + getMinutes(); 
+	document.title = titleTime;
+}
+
 // Returns the nearest "5" of the given number
 function roundToFive (num) {
 	return 5 * Math.round(num/5);
@@ -78,6 +84,8 @@ function setTime () {
 			$("#" + minsWords).addClass("selected");
 		}
 	}
+
+	setTitle();
 }
 
 $(document).ready(function(){
