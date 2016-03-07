@@ -19,7 +19,7 @@ var minsInWords = {
 
 function setTitle() {
 	var date = getTime ();
-	var titleTime = date.getHours() + ":" + getMinutes(); 
+	var titleTime = date.getHours() + ":" + date.getMinutes(); 
 	document.title = titleTime;
 }
 
